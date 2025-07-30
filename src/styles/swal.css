@@ -1,0 +1,31 @@
+.sw-from {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sw-from > input {
+  height: 40px;
+  padding: 0 10px;
+  background-color: var(--color-foreground);
+  border-radius: 10px;
+}
+
+.sw-from > * {
+  width: 100%;
+}
+
+.sw-from > .sw-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sw-from > * > * {
+  height: 40px;
+  padding: 0 10px;
+  background-color: var(--color-foreground);
+  border-radius: 10px;
+}

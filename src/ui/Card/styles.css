@@ -1,0 +1,4 @@
+.ui-card {
+  background-color: var(--color-foreground);
+  border-radius: 20px;
+}

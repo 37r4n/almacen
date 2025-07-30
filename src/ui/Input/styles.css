@@ -1,0 +1,30 @@
+.ui-input {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  border-bottom: 2px solid;
+  border-color: var(--color-primary);
+}
+
+.ui-input-start-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: none;
+  padding: 5px;
+}
+
+.ui-input-center-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ui-input-center-content > input {
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+}

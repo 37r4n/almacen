@@ -1,0 +1,28 @@
+.component-navbar {
+  display: flex;
+  height: 60px;
+  background-color: var(--color-primary);
+}
+
+.component-navbar > .component-navbar-left {
+  display: flex;
+  gap: 20px;
+}
+
+.component-navbar > .component-navbar-center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.component-navbar > .component-navbar-left > img {
+  height: 60px;
+  width: 60px;
+}
+
+.component-navbar > .component-navbar-left > p {
+  margin: auto 0;
+  font-size: 20px;
+}

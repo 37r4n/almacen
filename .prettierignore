@@ -1,0 +1,10 @@
+# Env files
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+
+# Node
+node_modules/

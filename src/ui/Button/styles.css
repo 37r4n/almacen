@@ -1,0 +1,15 @@
+.ui-button {
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.ui-button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.ui-button:active {
+  cursor: pointer;
+  transform: scale(0.99);
+}

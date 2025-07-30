@@ -1,0 +1,60 @@
+.template-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.template-login-card {
+  position: relative;
+  width: 400px;
+  padding: 80px 20px 20px 20px;
+}
+
+.template-login-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: var(--color-foreground);
+  overflow: hidden;
+
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.template-login-icon > div {
+  height: 95%;
+  width: 95%;
+  border-radius: 50%;
+  background-color: var(--color-foreground);
+  border-color: var(--color-primary);
+  overflow: hidden;
+}
+
+.template-login-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 30px;
+}
+
+.template-login-content > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.template-login-content > * > * {
+  width: 100%;
+}
+
+.template-login-content > * > button {
+  background-color: var(--color-warning);
+}

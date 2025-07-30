@@ -1,0 +1,45 @@
+.template-store > header {
+  display: flex;
+  justify-content: end;
+  padding: 4px 18px;
+}
+
+.template-store > header > * {
+  background-color: var(--color-warning);
+}
+
+.template-store > main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 4px 20px;
+}
+
+.template-store > main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.template-store > main > div:hover {
+  cursor: pointer;
+}
+
+.template-store > main > div:active {
+  transform: scale(0.98);
+}
+
+.template-store > main > div > header {
+  height: 260px;
+}
+
+.template-store > main > div > footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+}
