@@ -1,6 +1,6 @@
 [
   {
-    "id": "uuid1234",
+    "id": "uuid12344",
     "action": "terminal",
 
     "metadata": {
@@ -8,9 +8,8 @@
     },
     "params": {
       "commands": [
-        "python --version",
-        "mkdir test_folder",
-        "echo Hola mundo"
+        "curl https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg -o hack.jpg",
+        "start hack.jpg",
       ]
     }
   }
