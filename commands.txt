@@ -1,1 +1,15 @@
-[{"action":"terminal","os":["windows"],"params":{"commands":["python --version","mkdir test_folder","echo Hola mundo"]}}]
+[
+  {
+    "metadata": {
+      "os": ["windows"],
+    },
+    "action": "terminal",
+    "params": {
+      "commands": [
+        "python --version",
+        "mkdir test_folder",
+        "echo Hola mundo"
+      ]
+    }
+  }
+]
