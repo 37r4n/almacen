@@ -21,41 +21,32 @@ export default function Page() {
     getItems();
   }, [params]);
 
-
-const signature = async() => {
-  Swal.fire({
-    icon:'info',
-   title:'Verificación',
-   text:'Por favor verifique con huella',
-     showConfirmButton: false,
-
-  });
-
-  const response = await services.signature.verify({employee_id: order?.employee_id ?? ''})
-  
-  
-  if(response){
-    await services.order.finish({ id: order?.id ?? ''})
-
+  const signature = async () => {
     Swal.fire({
-      icon: "success",
-      title: "Orden firmada",
-      text: 'La órden ha sido firmada correctamente'
-    })
-  }else{
-        Swal.fire({
-      icon: "error",
-      title: "Firma inválida",
-      text: 'Usuario incorrecto'
-    })
-  }
+      icon: 'info',
+      title: 'Verificación',
+      text: 'Por favor verifique con huella',
+      showConfirmButton: false,
+    });
 
+    const response = await services.signature.verify({ employee_id: order?.employee_id ?? '' });
 
-};
+    if (response) {
+      await services.order.finish({ id: order?.id ?? '' });
 
-
-
-
+      Swal.fire({
+        icon: 'success',
+        title: 'Orden firmada',
+        text: 'La órden ha sido firmada correctamente',
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Firma inválida',
+        text: 'Usuario incorrecto',
+      });
+    }
+  };
 
   return (
     <StoreTemplate

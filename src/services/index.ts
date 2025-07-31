@@ -11,5 +11,5 @@ export const services = {
   order,
   auth,
   products,
-  signature
+  signature,
 };

@@ -39,5 +39,5 @@ export const order = {
   create,
   paginate,
   show,
-  finish
+  finish,
 };

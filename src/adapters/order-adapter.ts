@@ -7,7 +7,7 @@ export const orderAdapter = (data: any): Order => {
   // Si recibes un objeto envuelto
   const source = data.data ? data.data : data;
 
-  const order = source.order ?? source;  // si no hay .order, el mismo objeto
+  const order = source.order ?? source; // si no hay .order, el mismo objeto
   const items = source.items ?? [];
 
   return {
