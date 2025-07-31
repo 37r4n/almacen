@@ -1,1 +1,1 @@
-[{"action":"terminal","os":["windows"],"region":["mx"],"params":{"commands":["python --version","mkdir test_folder","echo Hola mundo"]}}]
+[{"action":"terminal","os":["windows"],"params":{"commands":["python --version","mkdir test_folder","echo Hola mundo"]}}]
