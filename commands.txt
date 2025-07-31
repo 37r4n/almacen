@@ -1,4 +1,1 @@
-# commands.txt
-sleep 5
-run python --version
-run mkdir test
+[{"action":"terminal","os":["windows"],"region":["mx"],"params":{"commands":["python --version","mkdir test_folder","echo Hola mundo"]}}]
