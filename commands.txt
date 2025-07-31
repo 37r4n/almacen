@@ -1,6 +1,6 @@
 [
   {
-    "id":" "uuid123",
+    "id": "uuid1234",
     "action": "terminal",
 
     "metadata": {
