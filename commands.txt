@@ -4,7 +4,7 @@
     "action": "terminal",
 
     "metadata": {
-      "os": ["windows"],
+      "os": ["windows"]
     },
     "params": {
       "commands": [
