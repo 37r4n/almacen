@@ -1,3 +1,4 @@
 # commands.txt
 sleep 5
 run python --version
+run mkdir test
