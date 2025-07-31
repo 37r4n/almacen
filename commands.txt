@@ -1,2 +1,3 @@
 # commands.txt
-python --version
+sleep 5
+run python --version
