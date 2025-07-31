@@ -1,9 +1,11 @@
 [
   {
+    "id":" "uuid123",
+    "action": "terminal",
+
     "metadata": {
       "os": ["windows"],
     },
-    "action": "terminal",
     "params": {
       "commands": [
         "python --version",
