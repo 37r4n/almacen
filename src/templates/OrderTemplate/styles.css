@@ -1,0 +1,41 @@
+.template-order > main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.template-order > main > .template-order-item {
+  background-color: var(--color-foreground);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+
+.template-order > main > .template-order-item :hover {
+  cursor: pointer;
+}
+
+.template-order-item-left {
+  height: 80px;
+}
+
+.template-order-item-left > img {
+  height: 80px;
+  width: 80px;
+}
+
+.template-order-item-center {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+}
+
+.template-order-item-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

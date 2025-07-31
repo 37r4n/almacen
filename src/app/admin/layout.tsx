@@ -10,14 +10,20 @@ import { useRouter } from 'next/navigation';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [employee, setEmployee] = useState<Employee | null>(null);
-  const router = useRouter()
+  const router = useRouter();
 
   const validate = async () => {
     try {
       const access_token = Cookies.get('access_token') ?? '';
-      const resonse = await services.auth.validate({ access_token });
-      setEmployee(resonse);
-    } catch {}
+      const response = await services.auth.validate({ access_token });
+      setEmployee(response);
+      if (response.id == 'undefined') {
+        router.push('/login');
+      }
+    } catch {
+      console.log(123);
+      router.push('/login');
+    }
   };
 
   useEffect(() => {

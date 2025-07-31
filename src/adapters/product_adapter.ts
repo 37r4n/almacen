@@ -10,5 +10,5 @@ export const productAdapter = (data: any): Product => ({
         id: String(img.id),
         url: String(img.url),
       }))
-    : [], // fallback si no hay imágenes
+    : [],
 });

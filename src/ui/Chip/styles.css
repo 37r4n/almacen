@@ -1,0 +1,6 @@
+.ui-chip {
+  background-color: var(--color-primary);
+  padding: 12px;
+  border-radius: 20px;
+  color: white;
+}
